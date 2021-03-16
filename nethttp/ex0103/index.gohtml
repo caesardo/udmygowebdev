@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{if .Method}}
+        <p><strong>Method: {{.Method}}</strong></p>
+    {{end}}
+
+    {{if .URL}}<p>The request URL:</p>
+    <ul>
+        <li>Scheme: {{.URL.Scheme}}</li>
+        <li>Opaque: {{.URL.Opaque}}</li>
+        <li>Host: {{.URL.Host}}</li>
+        <li>Path: {{.URL.Path}}</li>
+        <li>RawPath: {{.URL.RawPath}}</li>
+        <li>ForceQuery: {{.URL.ForceQuery}}</li>
+        <li>RawQuery: {{.URL.RawQuery}}</li>
+        <li>Fragment: {{.URL.Fragment}}</li>
+    </ul>
+    {{end}}
+
+    {{if .ContentLength}}
+        <p>ContentLength: {{.ContentLength}}</p>
+    {{end}}
+
+    {{if .Headers}}
+        {{range $k, $v := .Headers}}
+            <h3>{{$k}}</h3>
+            <ul>
+            {{range $v}}
+                <li>{{.}}</li>
+            {{end}}
+            </ul>
+        {{end}}
+    {{end}}
+
+    {{if .Form}}
+            {{range $k, $v := .Form}}
+                <h3>$k</h3>
+                <ul>
+                    {{range $v}}
+                    <li>{{.}}</li>
+                    {{end}}
+                </ul>
+            {{end}}
+    {{end}}
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h1>STOCK DATA TEMPLATE</h1>
+<ul>
+    {{ range . }}
+    <li>{{ .Date }} - {{ .Open }} {{ .High }} {{ .Low }} {{ .Close }} {{ .Volume }} {{ .AdjClose }}</li>
+    {{ end }}
+</ul>
+
+</body>
+</html>
