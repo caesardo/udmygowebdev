@@ -1,0 +1,1 @@
+Just some exercise files from Todd McLeod's Golang Web Dev Course on [udemy](https://www.udemy.com/share/101XnqAEIad1hURH0H/)
