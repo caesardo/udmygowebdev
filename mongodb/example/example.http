@@ -1,0 +1,9 @@
+curl -X POST -H "Content-Type: application/json" -d '{"Name":"James Bond","Gender":"male","Age":32}' http://localhost:8080/user
+
+###
+
+curl http://localhost:8080/user/6056b5354d79323dc883541a
+
+###
+
+curl -X DELETE -H "Content-Type: application/json" http://localhost:8080/user/6056b5354d79323dc883541a
